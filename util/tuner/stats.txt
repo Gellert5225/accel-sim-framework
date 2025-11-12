@@ -1,0 +1,2414 @@
+Running make in ./gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/
+make: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark'
+mkdir -p /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/bin
+make -C ubench/atomics/Atomic_add_bw/ tuner
+make -C ubench/atomics/Atomic_add_bw_conflict/ tuner
+make -C ubench/atomics/Atomic_add_bw_diverge/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw'
+make -C ubench/atomics/Atomic_add_bw_profile/ tuner
+make -C ubench/atomics/Atomic_add_lat/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_conflict'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_diverge'
+make -C ubench/atomics/Spinlock_simple/ tuner
+make -C ubench/core/config_dpu/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_profile'
+make -C ubench/core/config_fpu/ tuner
+make -C ubench/core/config_int/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_lat'
+make -C ubench/core/config_sfu/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Spinlock_simple'
+nvcc -arch=sm_86  -DTUNER atomic_add_bw.cu -o atomic_add_bw -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_dpu'
+make -C ubench/core/config_tensor/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_fpu'
+make -C ubench/core/config_udp/ tuner
+nvcc -arch=sm_86  -DTUNER atomic_add_bw_diverge.cu -o atomic_add_bw_diverge -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_int'
+nvcc -arch=sm_86  -DTUNER atomic_add_bw_conflict.cu -o atomic_add_bw_conflict -I -L -lcudart
+make -C ubench/core/core_config/ tuner
+nvcc -arch=sm_86  -DTUNER atomic_add_bw_profile.cu -o atomic_add_bw_profile -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_sfu'
+make -C ubench/core/lat_double/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_tensor'
+nvcc -arch=sm_86  -DTUNER atomic_add_lat.cu -o atomic_add_lat -I -L -lcudart
+make -C ubench/core/lat_float/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_udp'
+make -C ubench/core/lat_half/ tuner
+nvcc -arch=sm_86  -DTUNER config_fpu.cu -o config_fpu -I -L -lcudart
+make -C ubench/core/lat_int32/ tuner
+nvcc -arch=sm_86  -DTUNER spinlock_simple.cu -o spinlock_simple -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER config_int.cu -o config_int -I -L -lcudart
+make -C ubench/core/MaxFlops_double/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_double'
+make -C ubench/core/MaxFlops_float/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/core_config'
+nvcc -arch=sm_86  -DTUNER config_tensor.cu -o config_tensor -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_float'
+make -C ubench/core/MaxFlops_half/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_half'
+make -C ubench/core/MaxIops_int32/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_int32'
+nvcc -arch=sm_86  -DTUNER config_udp.cu -o config_udp -I -L -lcudart
+make -C ubench/core/regfile_bw/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_double'
+make -C ubench/core/sfu_bw_fsqrt/ tuner
+make -C ubench/core/sfu_lat_fsqrt/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_float'
+nvcc -arch=sm_86  -DTUNER core_config.cu -o core_config -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_half'
+nvcc -arch=sm_86  -DTUNER lat_double.cu -o lat_double -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxIops_int32'
+nvcc -arch=sm_86  -DTUNER lat_float.cu -o lat_float -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_bw_fsqrt'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/regfile_bw'
+nvcc -arch=sm_86  -DTUNER config_dpu.cu -o config_dpu -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_lat_fsqrt'
+nvcc -arch=sm_86  -DTUNER MaxFlops_double.cu -o MaxFlops_double -I -L -lcudart
+make -C ubench/core/tensor_bw_half/ tuner
+nvcc -arch=sm_86  -DTUNER lat_int32.cu -o lat_int32 -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER config_sfu.cu -o config_sfu -I -L -lcudart
+make -C ubench/core/tensor_lat_half/ tuner
+nvcc -arch=sm_86  -DTUNER MaxFlops_float.cu -o MaxFlops_float -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER MaxFlops_half.cu -o MaxFlops_half -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER lat_half.cu -o lat_half -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER sfu_lat_fsqrt.cu -o sfu_lat_fsqrt -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER regfile_bw.cu -o regfile_bw -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER sfu_bw_fsqrt.cu -o sfu_bw_fsqrt -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_bw_half'
+nvcc -arch=sm_86  -DTUNER MaxFlops_int32.cu -o MaxIops_int32 -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_lat_half'
+make -C ubench/l1_cache/l1_access_grain/ tuner
+make -C ubench/l1_cache/l1_adaptive/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_access_grain'
+make -C ubench/l1_cache/l1_associativity/ tuner
+nvcc -arch=sm_86  -DTUNER tensor_bw_half.cu -o tensor_bw_half -I -L -lcudart
+make -C ubench/l1_cache/l1_banks/ tuner
+make -C ubench/l1_cache/l1_bw_128/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_adaptive'
+nvcc -arch=sm_86  -DTUNER l1_access_grain.cu -o l1_access_grain -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_banks'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_associativity'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_128'
+make -C ubench/l1_cache/l1_bw_32f/ tuner
+make -C ubench/l1_cache/l1_bw_32f_unroll/ tuner
+nvcc -arch=sm_86  -DTUNER l1_adaptive.cu -o l1_adaptive -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_banks.cu -o l1_banks -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f'
+nvcc -arch=sm_86  -DTUNER l1_associativity.cu -o l1_associativity -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_bw_128.cu -o l1_bw_128 -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll'
+make -C ubench/l1_cache/l1_bw_32f_unroll_large/ tuner
+make -C ubench/l1_cache/l1_bw_64f/ tuner
+make -C ubench/l1_cache/l1_bw_64v/ tuner
+nvcc -arch=sm_86  -DTUNER tensor_lat_half.cu -o tensor_lat_half -I -L -lcudart
+make -C ubench/l1_cache/l1_config/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll_large'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64v'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_config'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64f'
+make -C ubench/l1_cache/l1_lat/ tuner
+make -C ubench/l1_cache/l1_mshr/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_lat'
+nvcc -arch=sm_86  -DTUNER l1_bw_32f_unroll.cu -o l1_bw_32f_unroll -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_bw_32f.cu -o l1_bw_32f -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_config.cu -o l1_config -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_bw_64v.cu -o l1_bw_64v -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_lat.cu -o l1_lat -I -L -lcudart
+make -C ubench/l1_cache/l1_sector/ tuner
+make -C ubench/l1_cache/l1_shared_bw/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_mshr'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_sector'
+nvcc -arch=sm_86  -DTUNER l1_bw_64f.cu -o l1_bw_64f -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_mshr.cu -o l1_mshr -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l1_bw_32f_unroll_large.cu -o l1_bw_32f_unroll_large -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_shared_bw'
+make -C ubench/l1_cache/l1_write_policy/ tuner
+nvcc -arch=sm_86  -DTUNER l1_sector.cu -o l1_sector -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_write_policy'
+nvcc -arch=sm_86  -DTUNER l1_shared_bw.cu -o l1_shared_bw -I -L -lcudart
+make -C ubench/l2_cache/l2_access_grain/ tuner
+make -C ubench/l2_cache/l2_bw_128/ tuner
+make -C ubench/l2_cache/l2_bw_32f/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_32f'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_access_grain'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_128'
+nvcc -arch=sm_86  -DTUNER l2_bw_32f.cu -o l2_bw_32f -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l2_access_grain.cu -o l2_access_grain -I -L -lcudart
+make -C ubench/l2_cache/l2_bw_64f/ tuner
+make -C ubench/l2_cache/l2_config/ tuner
+nvcc -arch=sm_86  -DTUNER l1_write_policy.cu -o l1_write_policy -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l2_bw_128.cu -o l2_bw_128 -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_config'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_64f'
+make -C ubench/l2_cache/l2_copy_engine/ tuner
+nvcc -arch=sm_86  -DTUNER l2_bw_64f.cu -o l2_bw_64f -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l2_config.cu -o l2_config -I -L -lcudart
+make -C ubench/l2_cache/l2_lat/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_copy_engine'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_lat'
+make -C ubench/l2_cache/l2_write_policy/ tuner
+nvcc -arch=sm_86  -DTUNER l2_copy_engine.cu -o l2_copy_engine -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l2_lat.cu -o l2_lat -I -L -lcudart
+make -C ubench/mem/mem_atom_size/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_write_policy'
+make -C ubench/mem/mem_bw/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_atom_size'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_bw'
+nvcc -arch=sm_86  -DTUNER mem_atom_size.cu -o mem_atom_size -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER l2_write_policy.cu -o l2_write_policy -I -L -lcudart
+make -C ubench/mem/mem_config/ tuner
+make -C ubench/mem/mem_lat/ tuner
+make -C ubench/shd/shared_bank_conflicts/ tuner
+make -C ubench/shd/shared_bw/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_config'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bank_conflicts'
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_lat'
+make -C ubench/shd/shared_bw_64/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw'
+make -C ubench/shd/shared_cp_async/ tuner
+nvcc -arch=sm_86  -DTUNER sharedBankConflicts.cu -o shared_bank_conflicts -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw_64'
+make -C ubench/shd/shared_lat/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_cp_async'
+make -C ubench/shd/shd_config/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_lat'
+make -C ubench/system/deviceQuery/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shd_config'
+make -C ubench/system/kernel_lat/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/deviceQuery'
+make -C ubench/system/list_devices/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/kernel_lat'
+nvcc -arch=sm_86  -DTUNER ldgsts.cu -o cp_async -I -L -lcudart
+make -C ubench/system/system_config/ tuner
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/list_devices'
+nvcc -arch=sm_86  -DTUNER mem_config.cu -o mem_config -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER mem_bw.cu -o mem_bw -I -L -lcudart
+make[1]: Entering directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/system_config'
+nvcc -arch=sm_86  -DTUNER kernel_lat.cu -o kernel_lat -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER list_devices.cpp -o list_devices -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER mem_lat.cu -o mem_lat -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER shared_bw_64.cu -o shared_bw_64 -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER system_config.cu -o system_config -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER shd_config.cu -o shd_config -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER shared_bw.cu -o shared_bw -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER shared_lat.cu -o shared_lat -I -L -lcudart
+nvcc -arch=sm_86  -DTUNER deviceQuery.cpp -o deviceQuery -I../../../../cuda-samples/Common/ -L -lcudart
+cp deviceQuery /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/deviceQuery/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/deviceQuery'
+cp list_devices /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/list_devices/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/list_devices'
+cp spinlock_simple /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Spinlock_simple/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Spinlock_simple'
+cp shared_bank_conflicts /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bank_conflicts/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bank_conflicts'
+cp l1_bw_32f_unroll_large /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll_large/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll_large'
+cp cp_async /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_cp_async/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_cp_async'
+cp atomic_add_bw_conflict /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_conflict/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_conflict'
+cp l2_write_policy /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_write_policy/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_write_policy'
+cp MaxFlops_double /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_double/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_double'
+cp MaxFlops_float /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_float/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_float'
+cp sfu_bw_fsqrt /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_bw_fsqrt/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_bw_fsqrt'
+cp l1_shared_bw /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_shared_bw/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_shared_bw'
+cp l1_write_policy /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_write_policy/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_write_policy'
+cp core_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/core_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/core_config'
+cp atomic_add_bw /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw'
+cp atomic_add_bw_diverge /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_diverge/../../../bin/
+cp l2_bw_64f /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_64f/../../../bin/
+cp l1_adaptive /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_adaptive/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_diverge'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_adaptive'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_64f'
+cp l1_bw_64f /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64f/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64f'
+cp l1_bw_128 /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_128/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_128'
+cp l2_copy_engine /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_copy_engine/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_copy_engine'
+cp config_fpu /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_fpu/../../../bin/
+cp l2_bw_32f /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_32f/../../../bin/
+cp config_udp /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_udp/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_fpu'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_udp'
+cp MaxIops_int32 /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxIops_int32/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_32f'
+cp atomic_add_bw_profile /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_profile/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxIops_int32'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_bw_profile'
+cp l2_bw_128 /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_128/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_bw_128'
+cp lat_float /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_float/../../../bin/
+cp sfu_lat_fsqrt /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_lat_fsqrt/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/sfu_lat_fsqrt'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_float'
+cp l1_access_grain /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_access_grain/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_access_grain'
+cp l1_banks /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_banks/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_banks'
+cp l1_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_lat'
+cp mem_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_lat'
+cp mem_bw /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_bw/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_bw'
+cp l2_access_grain /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_access_grain/../../../bin/
+cp shd_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shd_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_access_grain'
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shd_config'
+cp atomic_add_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/atomics/Atomic_add_lat'
+cp shared_bw /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw'
+cp mem_atom_size /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_atom_size/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_atom_size'
+cp config_dpu /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_dpu/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_dpu'
+cp kernel_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/kernel_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/kernel_lat'
+cp shared_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_lat'
+cp mem_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/mem/mem_config'
+cp lat_double /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_double/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_double'
+cp l1_bw_64v /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64v/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_64v'
+cp lat_int32 /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_int32/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_int32'
+cp config_int /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_int/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_int'
+cp MaxFlops_half /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_half/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/MaxFlops_half'
+cp config_sfu /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_sfu/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_sfu'
+cp l1_bw_32f_unroll /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f_unroll'
+cp l1_mshr /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_mshr/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_mshr'
+cp l2_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_config'
+cp l1_bw_32f /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_bw_32f'
+cp l1_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_config'
+cp l2_lat /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_lat/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l2_cache/l2_lat'
+cp shared_bw_64 /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw_64/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/shd/shared_bw_64'
+cp system_config /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/system_config/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/system/system_config'
+cp l1_sector /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_sector/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_sector'
+cp tensor_bw_half /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_bw_half/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_bw_half'
+cp tensor_lat_half /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_lat_half/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/tensor_lat_half'
+cp config_tensor /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_tensor/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/config_tensor'
+cp regfile_bw /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/regfile_bw/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/regfile_bw'
+cp lat_half /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_half/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/core/lat_half'
+cp l1_associativity /home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_associativity/../../../bin/
+make[1]: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark/ubench/l1_cache/l1_associativity'
+make: Leaving directory '/home/gellert/Developer/accel-sim-framework/util/tuner/gpu-app-collection-partial/src/cuda/GPU_Microbenchmark'
+running ./_app_cuda_version_0pHOJI microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_17sSoO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_1apnaJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_1vlrdw microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_1XFd3o microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_2kE9aB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_2ROPli microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_2U6tj6 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_34K7vZ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_39VEcK microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_3AAzUQ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_3Q16oZ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_3s3FOs microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_3vcLTi microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_40TASS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_4cibAd microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_4DJjkn microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_4LRoEI microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_4QGsmT microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_50OX1p microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_5eIQvo microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_5EkzZp microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_5kcGbZ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_6DaWLx microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_6k9pX5 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_6qDLzJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_79PvNP microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_7Z5dKm microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_7ZOr68 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_8kixoi microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_8n7BDR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_8wUynk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_9dq40b microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_aI86PR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_AIZzQ3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_akMIba microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_aSZXsz microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_b0TA34 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_bgXIkZ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_bPGruU microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_bPLK8o microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_bTLGf3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_BzkKJR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_c743qa microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_cwEZsG microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_D7QdtU microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_DJT4qA microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_dTadeD microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_dxaOCq microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_E0A4YR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_EEFoA8 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_EGkJE8 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_eik3FX microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ELgXpw microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ENXTyR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_eooNLJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_etGfdi microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_EXgS5m microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_F3wt99 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_F4krdK microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_FjYMgu microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_fKxGQx microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Fn0vdI microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_FSlZIw microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_FuJL5R microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_fXTxuc microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_gb2Wz9 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_gEydh3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_GLpPX0 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_gML92M microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_gNCphm microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_H0u6yU microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_H2KOzN microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_HeTR2z microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_HNvXiX microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_hoo7wk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_hpt4uK microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_hUKUGP microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Hvbzk7 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_hyytxR microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_i6ZuK3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_iEyq8u microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Ii3QDN microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_iI7QBV microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_IJJfBJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_INrfVk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_itGjF3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_iYei8r microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_izvZwf microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_jAlAGr microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_jjuSZP microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_kbo4sy microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_KgnZUJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_kjY9Nu microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_KVktec microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_kXuXuD microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_kz6XQj microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_KzZzQd microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ldu1dl microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_lmgIur microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_LOBJtM microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_LVpgrw microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_lYWjxO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_M3S3kx microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_mpZigz microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_MrKjlV microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_MZ7lyw microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_nc0EBS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_neHTOt microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_NJcmY4 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_nPULkB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_nRPavm microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_nu4Ozr microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Nul0CC microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_nzTTaS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_O2T3sT microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_OFaZY1 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ohWVVk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_OjmKpO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_oUfAiC microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_owrsCT microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_q8EJUk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_QA5udl microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_QgBNe7 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_qiY5F0 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_qoejTC microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_QZ4SDO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_r4t8Jh microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_R8rZbM microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_RKC1L3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_rRV5Tl microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_RSxXs0 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_RVBV4X microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_rWl9TS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_rxFRmv microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_rZyyjN microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_scpYT8 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_SeHvih microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_spyA53 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_SYP7zd microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_SZTPFJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_t4aP18 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_tAOQ6h microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_TBbzv4 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Tf7gP3 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_thRmnJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_tkkoNO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_tKLQ38 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_tmznwi microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ttiNHB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_txtsKa microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_tzxqTE microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_u5Z9MO microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_u6088u microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ubBoIB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_uHWS0v microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_UK9cvF microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_ukuQJ6 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_uQqfSy microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_UYbcnS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_uZGxVB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_v1geDN microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_v45p3D microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_vBgvQX microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_vhChNe microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_vQoJHK microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_vTV1jD microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_wdSD58 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_wJdC9V microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_x92dyS microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_XlMhKj microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Xnk9iC microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_xr2aqt microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_XUPRIU microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_YBPToa microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_yd3i6V microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_yELSXJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_yK8OTJ microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_yo3eJB microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_YwHVyn microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_z5P7hH microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_z6yaXH microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_Z9sAl2 microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_zEvyYF microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_zOEwJk microbenchmark
+/////////////////////////////////
+running ./_app_cuda_version_zUCJAC microbenchmark
+/////////////////////////////////
+running ./atomic_add_bw microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Atomic int32 bandwidth = 1.525996 (byte/clk)
+Total Clk number = 3606120412 
+/////////////////////////////////
+running ./atomic_add_bw_conflict microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Atomic int32 bandwidth = 31.751305 (byte/clk)
+Total Clk number = 21664176 
+/////////////////////////////////
+running ./atomic_add_bw_diverge microbenchmark
+Usage : atomics_add_bw_profile [# Conflict Atomics]     
+        [# Diverged Atomics]  must be between 1 and 16  
+/////////////////////////////////
+running ./atomic_add_bw_profile microbenchmark
+Usage : atomics_add_bw_profile [# Conflict Atomics]     
+        [# Diverged Atomics]  must be between 1 and 16  
+/////////////////////////////////
+running ./atomic_add_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Atomic int32 latency = 274.697266 (clk)
+Total Clk number = 1125160 
+/////////////////////////////////
+running ./config_dpu microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+DPU FLOP per SM = 3.999822 (flop/clk/SM)
+Total Clk number = 8388981 
+double-precision DPU latency = 55.025269 (clk)
+Total Clk number = 901534 
+
+//Accel_Sim config: 
+-gpgpu_num_dp_units 4
+-ptx_opcode_latency_dp 55,55,55,55,330
+-ptx_opcode_initiation_dp 64,64,64,64,130
+-trace_opcode_latency_initiation_dp 55,64
+/////////////////////////////////
+running ./config_fpu microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+FLOP per SM = 126.643440 (flop/clk/SM)
+Total Clk number = 66238 
+float-precision FPU latency = 4.067383 (clk)
+Total Clk number = 66640 
+
+//Accel_Sim config: 
+-gpgpu_num_sp_units 4
+-ptx_opcode_latency_fp 4,4,4,4,39
+-ptx_opcode_initiation_fp 2,2,2,2,4
+-trace_opcode_latency_initiation_sp 4,2
+/////////////////////////////////
+running ./config_int microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+int32 FLOP per SM = 127.206123 (flop/clk/SM)
+Total Clk number = 65945 
+int32 latency = 4.155518 (clk)
+Total Clk number = 17021 
+
+//Accel_Sim config: 
+-gpgpu_num_int_units 4
+-ptx_opcode_latency_int 4,4,4,4,21
+-ptx_opcode_initiation_int 2,2,2,2,2
+-trace_opcode_latency_initiation_int 4,2
+/////////////////////////////////
+running ./config_sfu microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SFU fast sqrt bw = 15.9719(flops/clk/SM) 
+Total Clk number = 262606
+SFU fast sqrt latency = 23.1189(clk) 
+Total Clk number = 94695
+
+//Accel_Sim config: 
+-gpgpu_num_sfu_units 4
+-ptx_opcode_latency_sfu 23
+-ptx_opcode_initiation_sfu 8
+-trace_opcode_latency_initiation_sfu 23,8
+/////////////////////////////////
+running ./config_tensor microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+wmma PTX issue bandwidth = 1.99896(thread/clk/SM) 
+hmma SASS issue bandwidth = 3.99791(thread/clk/SM)
+FMA tensor bandwidth = 255.867(FMA/clk/SM)
+Total Clk number = 1049123
+wmma latency = 64.0581(clk)
+hmma latency = 32.0291(clk)
+Total Clk number = 262382
+
+//Accel_Sim config: 
+-gpgpu_tensor_core_avail 1
+-gpgpu_num_tensor_core_units 4
+-ptx_opcode_latency_tesnor 64
+-ptx_opcode_initiation_tensor 64
+-trace_opcode_latency_initiation_tensor 32,32
+-specialized_unit_3 1,4,32,4,4,TENSOR
+-trace_opcode_latency_initiation_spec_op_3 32,32
+/////////////////////////////////
+running ./config_udp microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+-specialized_unit_4 1,4,4,4,4,UDP
+-trace_opcode_latency_initiation_spec_op_4 4,1
+/////////////////////////////////
+running ./core_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+CUDA version number = 8.6
+
+//Accel_Sim config: 
+-gpgpu_ptx_force_max_capability 86
+-gpgpu_shader_registers 65536
+-gpgpu_registers_per_block 65536
+-gpgpu_occupancy_sm_number 86
+-gpgpu_coalesce_arch 86
+-gpgpu_pipeline_widths 4,4,4,4,4,4,4,4,4,4,8,4,4
+-gpgpu_sub_core_model 1
+-gpgpu_enable_specialized_operand_collector 0
+-gpgpu_operand_collector_num_units_gen 8
+-gpgpu_operand_collector_num_in_ports_gen 8
+-gpgpu_operand_collector_num_out_ports_gen 8
+-gpgpu_num_sched_per_core 4
+-gpgpu_max_insn_issue_per_warp 1
+-gpgpu_dual_issue_diff_exec_units 1
+-gpgpu_inst_fetch_throughput 4
+-gpgpu_shader_core_pipeline 1536:32
+-gpgpu_shader_cta 32
+/////////////////////////////////
+running ./cp_async microbenchmark
+/////////////////////////////////
+running ./data.csv microbenchmark
+/////////////////////////////////
+running ./deviceQuery microbenchmark
+  Device : "NVIDIA GeForce RTX 3090"
+
+  CUDA version number                         : 8.6
+  GPU Max Clock rate                             : 1695 MHz 
+  Multiprocessors Count                       : 82
+  Maximum number of threads per multiprocessor: 1536
+  CUDA Cores per multiprocessor               : 128 
+  Registers per multiprocessor                : 65536
+  Shared memory per multiprocessor            : 102400 bytes
+  Warp size                                   : 32
+  Maximum number of threads per block         : 1024
+  Shared memory per block                     : 49152 bytes
+  Registers per block                         : 65536
+  globalL1CacheSupported                      : 1
+  localL1CacheSupported                       : 1
+  L2 Cache Size                             : 6 MB
+  Global memory size                        : 24 GB
+  Memory Clock rate                           : 9751 Mhz
+  Memory Bus Width                            : 384 bit
+ ////////////////////////// 
+/////////////////////////////////
+running ./kernel_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Kernel Launch Latency = 56388.3 cycles
+The reported latency above can be slightly higher than real. For accurate evaultion using nvprof event, exmaple: make events ./kernel_lat
+
+//Accel_Sim config: 
+-gpgpu_kernel_launch_latency  56388
+/////////////////////////////////
+running ./l1_access_grain microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+This benchmark measures coalescing granularity for differnet strides.
+check the nvprof or nvsight for received l1 reads and writes.
+to run the program with nsight: make nvsight ./l1_access_grain
+stats to look at: l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum & l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum
+
+/////////////////////////////////
+running ./l1_adaptive microbenchmark
+The ubench is not imepleneted yet.
+/////////////////////////////////
+running ./l1_associativity microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Launching L1 cache line size ubench
+Saving L1 cache line size data at L1line.csv
+Launching L1 cache assoc ubench
+Saving L1 cache assoc data at L1asso.csv
+/////////////////////////////////
+running ./L1asso.csv microbenchmark
+/////////////////////////////////
+running ./l1_banks microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+The ubench is not imepleneted yet.
+/////////////////////////////////
+running ./l1_bw_128 microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 bandwidth = 120.889(byte/clk/SM), 157.622(GB/s/SM)
+Total Clk number = 555126
+/////////////////////////////////
+running ./l1_bw_32f microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 bandwidth = 63.9583(byte/clk/SM), 83.3921(GB/s/SM)
+Total Clk number = 1049260
+/////////////////////////////////
+running ./l1_bw_32f_unroll microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 bandwidth = 63.736443 (byte/clk/SM)
+Total Clk number = 263228 
+/////////////////////////////////
+running ./l1_bw_32f_unroll_large microbenchmark
+L1 bandwidth = 63.638528 (byte/clk/SM)
+Total Clk number = 263633 
+/////////////////////////////////
+running ./l1_bw_64f microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 bandwidth = 13.4105(byte/clk/SM), 17.4853(GB/s/SM)
+Total Clk number = 312762
+/////////////////////////////////
+running ./l1_bw_64v microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 bandwidth = 111.32(byte/clk/SM), 145.144(GB/s/SM)
+Total Clk number = 18839
+/////////////////////////////////
+running ./l1_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+//Accel_Sim config: 
+-gpgpu_adaptive_cache_config 1
+-gpgpu_shmem_option 0,8,16,32,64,100
+-gpgpu_unified_l1d_size 128
+-gpgpu_l1_banks 4
+-gpgpu_cache:dl1 S:4:128:64,L:T:m:L:L,A:384:48,16:0,32
+-gpgpu_gmem_skip_L1D 0
+-gpgpu_l1_cache_write_ratio 25
+/////////////////////////////////
+running ./l1_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 Latency  =      41.9858 cycles
+Total Clk number = 1375791 
+
+//Accel_Sim config: 
+-gpgpu_l1_latency 41
+/////////////////////////////////
+running ./L1line.csv microbenchmark
+/////////////////////////////////
+running ./l1_mshr microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Launching L1 MSHR ubench
+Saving L1 MSHR data at MSHR100_array1073741824_shmem12288_itr6.csv
+/////////////////////////////////
+running ./l1_sector microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Launching L1 sector ubench
+Saving L1 sector data at data.csv
+/////////////////////////////////
+running ./l1_shared_bw microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Shared Memory Bandwidth = 62.271375 (byte/clk/SM)
+Total Clk number = 538842 
+/////////////////////////////////
+running ./l1_write_policy microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+This microbenchmark detects L1 write policy.
+check the nvprof or nvsight for received l1 reads and writes to detect the policy.
+see the code comments for further details
+to run the program with nvsight: make nvsight ./l1_write_policy
+stats to look at: l1tex__t_sectors_pipe_lsu_mem_global_op_ld.sum & l1tex__t_sectors_pipe_lsu_mem_global_op_st.sum & l1tex__t_sectors_pipe_lsu_mem_global_op_ld_lookup_hit.sum & l1tex__t_sectors_pipe_lsu_mem_global_op_st_lookup_hit.sum 
+
+/////////////////////////////////
+running ./l2_access_grain microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+This benchmark measures l2 access granularity for differnet strides.
+check the nvprof or nvsight for received l2 reads and write.
+to run the program with nsight: make nvsight ./l2_access_grain
+stats to look at: lts__t_sectors_srcunit_tex_op_read.sum and lts__t_sectors_srcunit_tex_op_write.sum 
+
+/////////////////////////////////
+running ./l2_bw_128 microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Total Clk number = 233047
+L2 bandwidth = 1475.81(byte/clk), 1924.24(GB/s)
+Max Theortical L2 bandwidth = 1536(byte/clk), 2002.72(GB/s)
+L2 BW achievable = 96.0813%
+/////////////////////////////////
+running ./l2_bw_32f microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Total Clk number = 558142
+L2 bandwidth = 1232.42(byte/clk), 1606.89(GB/s)
+Max Theortical L2 bandwidth = 1536(byte/clk), 2002.72(GB/s)
+L2 BW achievable = 80.2357%
+/////////////////////////////////
+running ./l2_bw_64f microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Total Clk number = 1255421
+L2 bandwidth = 1095.83(byte/clk), 1428.8(GB/s)
+Max Theortical L2 bandwidth = 1536(byte/clk), 2002.72(GB/s)
+L2 BW achievable = 71.3433%
+/////////////////////////////////
+running ./l2_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L2 Cache Size = 6 MB
+L2 Banks number = 48
+
+//Accel_Sim config: 
+-gpgpu_n_sub_partition_per_mchannel 2
+-icnt_flit_size 40
+-gpgpu_memory_partition_indexing 0
+-gpgpu_cache:dl2 S:64:128:16,L:B:m:L:P,A:192:4,32:0,32
+/////////////////////////////////
+running ./l2_copy_engine microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L2 Latency no-warmp up =     249.9471 cycles 
+Total Clk number = 8190267 
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L2 Hit Latency =     249.4820 cycles 
+Total Clk number = 8175025 
+Is memcpy cached in L2? Yes, error=0.4
+
+//Accel_Sim config: 
+-gpgpu_perf_sim_memcpy 1
+/////////////////////////////////
+running ./l2_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L2 Hit Latency =     249.9773 cycles 
+Total Clk number = 8191255 
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L1 Latency  =      41.9897 cycles
+Total Clk number = 1375919 
+
+//Accel_Sim config: 
+-gpgpu_l2_rop_latency 207
+/////////////////////////////////
+running ./l2_write_policy microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+This microbenchmark detects L2 write policy.
+check the nvprof or nvsight for received L2 reads and writes to detect the policy.
+see the code comments for further details
+to run the program with nvsight: make nvsight ./2
+stats to look at: llts__t_sectors_srcunit_tex_op_read.sum & lts__t_sectors_srcunit_tex_op_write.sum & lts__t_sectors_srcunit_tex_op_read_lookup_hit.sum & lts__t_sectors_srcunit_tex_op_write_lookup_hit.sum 
+
+/////////////////////////////////
+running ./lat_double microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+double-precision DPU latency = 55.037781 (clk)
+Total Clk number = 901739 
+/////////////////////////////////
+running ./lat_float microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+float-precision FPU latency = 4.078064 (clk)
+Total Clk number = 66815 
+/////////////////////////////////
+running ./lat_half microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+fpu16 latency = 4.169922 (clk)
+Total Clk number = 17080 
+/////////////////////////////////
+running ./lat_int32 microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+int32 latency = 4.194580 (clk)
+Total Clk number = 17181 
+/////////////////////////////////
+running ./list_devices microbenchmark
+
+Device 0: "NVIDIA GeForce RTX 3090 sm_8.6"
+/////////////////////////////////
+running ./MaxFlops_double microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+DPU FLOP per SM = 3.999778 (flop/clk/SM)
+Total Clk number = 8389074 
+/////////////////////////////////
+running ./MaxFlops_float microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+FLOP per SM = 126.635788 (flop/clk/SM)
+Total Clk number = 66242 
+/////////////////////////////////
+running ./MaxFlops_half microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+half FLOP per SM = 251.653214 (flop/clk/SM)
+Total Clk number = 16667 
+/////////////////////////////////
+running ./MaxIops_int32 microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+int32 FLOP per SM = 127.034676 (flop/clk/SM)
+Total Clk number = 66034 
+/////////////////////////////////
+running ./mem_atom_size microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+
+This benchmark measures mem atom size granularity
+check the nvprof or nvsight for received mem reads and writes
+to run the program with nsight: make nvsight ./l2_access_grain
+stats to look at: dram__sectors_read.sum & dram__sectors_write.sum & dram__bytes_read.sum & dram__sectors_read.sum
+
+we launched 3145728 read memory reqs (1 req per thread) with a stride of 32 (128 bytes)
+if the number of memory reads is the same as read reqs, then mem atom size is 32B
+if the number of memory reads is 2X issued read reqs, then mem atom size is 64B, etc.
+
+/////////////////////////////////
+running ./mem_bw microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Mem BW= 443.640869 (Byte/Clk)
+Mem BW= 648.158208 (GB/sec)
+Max Theortical Mem BW= 936.096008 (GB/sec)
+Mem Efficiency = 47.392666 %
+Total Clk number = 170177 
+/////////////////////////////////
+running ./mem_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Global memory size = 24 GB
+Memory Clock rate = 9751 Mhz
+Memory Bus Width = 384 bit
+Memory type = GDDR6
+Memory channels = 24
+
+//Accel_Sim config: 
+-gpgpu_n_mem 24
+-gpgpu_n_mem_per_ctrlr 1
+-gpgpu_dram_buswidth 2
+-gpgpu_dram_burst_length 16
+-dram_data_command_freq_ratio 4
+-dram_dual_bus_interface 0
+-gpgpu_dram_timing_opt nbk=16:CCD=4:RRD=17:RCD=33:RAS=76:RP=33:RC=109:CL=33:WL=11:CDLR=14:WR=33:nbkgrp=4:CCDL=9:RTPL=6
+/////////////////////////////////
+running ./mem_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Mem latency =     521.9464 cycles 
+Total Clk number = 4275785 
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+L2 Hit Latency =     250.3206 cycles 
+Total Clk number = 8202505 
+
+//Accel_Sim config: 
+-dram_latency 271
+/////////////////////////////////
+running ./MSHR100_array1073741824_shmem12288_itr6.csv microbenchmark
+/////////////////////////////////
+running ./regfile_bw microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+wmma PTX issue bandwidth = 1.99878(thread/clk/SM) 
+hmma SASS issue bandwidth = 3.99756(thread/clk/SM)
+FMA tensor bandwidth = 255.844(FMA/clk/SM)
+Total Clk number = 1049216
+
+regfile_bw = 1024 (byte/SM)
+
+//Accel_Sim config: 
+-gpgpu_num_reg_banks 8
+-gpgpu_reg_file_port_throughput 2
+/////////////////////////////////
+running ./sfu_bw_fsqrt microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SFU fast sqrt bw = 15.9718(flops/clk/SM) 
+Total Clk number = 262607
+/////////////////////////////////
+running ./sfu_lat_fsqrt microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+SFU fast sqrt latency = 23.1543(clk) 
+Total Clk number = 94840
+/////////////////////////////////
+running ./shared_bank_conflicts microbenchmark
+
+matrix size: 512x512 (16x16 tiles), kernel name: 'transposeCoalesced', tile size: 32x32, block size: 32x8
+Done
+/////////////////////////////////
+running ./shared_bw microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Shared Memory Bandwidth = 63.8485(byte/clk/SM), 83.249(GB/s/SM)
+Total Clk number = 262766
+/////////////////////////////////
+running ./shared_bw_64 microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Shared Memory Bandwidth = 127.888(byte/clk/SM), 166.747(GB/s/SM)
+Total Clk number = 262374
+/////////////////////////////////
+running ./shared_lat microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Shared Memory Latency  = 29.033203 cycles
+Total Clk number = 59460 
+
+//Accel_Sim config: 
+-gpgpu_smem_latency 29
+/////////////////////////////////
+running ./shd_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Shared memory per multiprocessor = 102400 bytes
+Shared memory per block = 49152 bytes
+
+//Accel_Sim config: 
+-gpgpu_shmem_size 102400
+-gpgpu_shmem_sizeDefault 102400
+-gpgpu_shmem_per_block 49152
+/////////////////////////////////
+running ./spinlock_simple microbenchmark
+Starting CUDA Spinlock Test Program
+===================================
+
+Simple spinlock test
+---------------------------
+Launching 4 blocks with 256 threads each (1024 total threads)
+Each thread will increment the counter 100 times
+Expected result: 102400
+Actual result: 40807
+Simple counter test FAILED
+
+/////////////////////////////////
+running ./system_config microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+Device Name = NVIDIA GeForce RTX 3090
+GPU Max Clock rate = 1695 MHz 
+GPU Base Clock rate = 1400 MHz 
+SM Count = 82
+CUDA version number = 8.6
+
+//Accel_Sim config: 
+-gpgpu_compute_capability_major 8
+-gpgpu_compute_capability_minor 6
+-gpgpu_n_clusters 82
+-gpgpu_n_cores_per_cluster 1
+-gpgpu_clock_domains 1400:1400:1400:4875.5
+/////////////////////////////////
+running ./tensor_bw_half microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+FP16 operand, FP32 accumalte:
+wmma PTX issue bandwidth = 1.99907(thread/clk/SM) 
+hmma SASS issue bandwidth = 3.99814(thread/clk/SM)
+FMA tensor bandwidth = 255.881(FMA/clk/SM)
+Total Clk number = 1049065
+
+FP16 operand, FP16 accumalte:
+wmma PTX issue bandwidth = 3.99572(thread/clk/SM) 
+hmma SASS issue bandwidth = 7.99143(thread/clk/SM)
+FMA tensor bandwidth = 511.452(FMA/clk/SM)
+Total Clk number = 524850
+/////////////////////////////////
+running ./tensor_lat_half microbenchmark
+SM_NUMBER: 82
+WARP_SIZE: 32
+MAX_THREADS_PER_SM: 1536
+MAX_SHARED_MEM_SIZE: 102400
+MAX_WARPS_PER_SM: 48
+MAX_REG_PER_SM: 65536
+MAX_THREAD_BLOCK_SIZE: 1024
+MAX_SHARED_MEM_SIZE_PER_BLOCK: 49152
+MAX_REG_PER_BLOCK: 65536
+L1_SIZE: 49152
+L2_SIZE: 6291456
+MEM_SIZE: 25292898304
+MEM_CLK_FREQUENCY: 9751
+MEM_BITWIDTH: 384
+CLK_FREQUENCY: 1500
+THREADS_PER_BLOCK: 1024
+BLOCKS_PER_SM: 1
+THREADS_PER_SM: 1024
+BLOCKS_NUM: 82
+TOTAL_THREADS: 83968
+FP16 operand, FP32 accumalte:
+wmma latency = 64.0955(clk)
+hmma latency = 32.0477(clk)
+Total Clk number = 262535
+
+FP16 operand, FP16 accumalte:
+wmma latency = 33.0518(clk)
+hmma latency = 16.5259(clk)
+Total Clk number = 135380
+/////////////////////////////////
