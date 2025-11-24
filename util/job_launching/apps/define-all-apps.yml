@@ -1033,9 +1033,6 @@ mlperf_training:
         - training_mlperf_ssd:
               - args:
                 accel-sim-mem: 90G
-        - training_mlperf_rnn:
-              - args:
-                accel-sim-mem: 90G
 
 mlperf_inference_no_external_datasets:
     exec_dir: "$GPUAPPS_ROOT/bin/$CUDA_VERSION/release/"

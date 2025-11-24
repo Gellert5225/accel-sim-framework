@@ -446,6 +446,8 @@ for idx, app_and_args in enumerate(apps_and_args):
                     if existance_test != None:
                         stat_found.add(stat_name)
                         number = existance_test.group(1).strip()
+                        if number == '':
+                            continue
                         if statType != "agg":
                             stat_map[
                                 current_kernel + app_and_args + config + stat_name
