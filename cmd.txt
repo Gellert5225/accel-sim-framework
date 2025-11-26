@@ -1,0 +1,3 @@
+./util/job_launching/run_simulations.py -B rodinia_2.0-ft -C RTX3070-SASS -T ./hw_run/traces/device-0/12.8/ -N rodinia
+
+./util/job_launching/get_stats.py -R -k -K -B rodinia_2.0-ft -C RTX3070-SASS > lrr.csv
